@@ -5,6 +5,5 @@ RUN apt-get update && apt-get install -y mysql-client --no-install-recommends \
 
 COPY . /var/www
 
-RUN chown -R www-data:www-data \
-        /var/www/storage \
-        /var/www/bootstrap/cache
+RUN chown -R www-data:www-data /var/www
+RUN chmod 755 /var/www

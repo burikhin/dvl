@@ -31,10 +31,12 @@ services:
     volumes:
       - dbdata:/var/lib/mysql
     environment:
-      - "MYSQL_DATABASE=homestead"
-      - "MYSQL_USER=homestead"
-      - "MYSQL_PASSWORD=secret"
-      - "MYSQL_ROOT_PASSWORD=secret"
+      - ALLOW_EMPTY_PASSWORD=yes
+      - MYSQL_USER=homestead
+      - MYSQL_PASSWORD=secret
+      - MYSQL_DATABASE=homestead
+    ports:
+      - "33061:3306"
 
   # redis
   cache:

@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 13);
+/******/ 	return __webpack_require__(__webpack_require__.s = 12);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -71,7 +71,7 @@
 
 
 var bind = __webpack_require__(5);
-var isBuffer = __webpack_require__(21);
+var isBuffer = __webpack_require__(20);
 
 /*global toString:true*/
 
@@ -408,7 +408,7 @@ module.exports = g;
 /* WEBPACK VAR INJECTION */(function(process) {
 
 var utils = __webpack_require__(0);
-var normalizeHeaderName = __webpack_require__(23);
+var normalizeHeaderName = __webpack_require__(22);
 
 var DEFAULT_CONTENT_TYPE = {
   'Content-Type': 'application/x-www-form-urlencoded'
@@ -13620,12 +13620,12 @@ process.umask = function() { return 0; };
 
 
 var utils = __webpack_require__(0);
-var settle = __webpack_require__(24);
-var buildURL = __webpack_require__(26);
-var parseHeaders = __webpack_require__(27);
-var isURLSameOrigin = __webpack_require__(28);
+var settle = __webpack_require__(23);
+var buildURL = __webpack_require__(25);
+var parseHeaders = __webpack_require__(26);
+var isURLSameOrigin = __webpack_require__(27);
 var createError = __webpack_require__(8);
-var btoa = (typeof window !== 'undefined' && window.btoa && window.btoa.bind(window)) || __webpack_require__(29);
+var btoa = (typeof window !== 'undefined' && window.btoa && window.btoa.bind(window)) || __webpack_require__(28);
 
 module.exports = function xhrAdapter(config) {
   return new Promise(function dispatchXhrRequest(resolve, reject) {
@@ -13722,7 +13722,7 @@ module.exports = function xhrAdapter(config) {
     // This is only done if running in a standard browser environment.
     // Specifically not if we're in a web worker, or react-native.
     if (utils.isStandardBrowserEnv()) {
-      var cookies = __webpack_require__(30);
+      var cookies = __webpack_require__(29);
 
       // Add xsrf header
       var xsrfValue = (config.withCredentials || isURLSameOrigin(config.url)) && config.xsrfCookieName ?
@@ -13806,7 +13806,7 @@ module.exports = function xhrAdapter(config) {
 "use strict";
 
 
-var enhanceError = __webpack_require__(25);
+var enhanceError = __webpack_require__(24);
 
 /**
  * Create an Error with the specified message, config, error code, request and response.
@@ -13864,53 +13864,6 @@ module.exports = Cancel;
 
 /***/ }),
 /* 11 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var disposed = false
-var normalizeComponent = __webpack_require__(12)
-/* script */
-var __vue_script__ = __webpack_require__(41)
-/* template */
-var __vue_template__ = __webpack_require__(42)
-/* template functional */
-var __vue_template_functional__ = false
-/* styles */
-var __vue_styles__ = null
-/* scopeId */
-var __vue_scopeId__ = null
-/* moduleIdentifier (server only) */
-var __vue_module_identifier__ = null
-var Component = normalizeComponent(
-  __vue_script__,
-  __vue_template__,
-  __vue_template_functional__,
-  __vue_styles__,
-  __vue_scopeId__,
-  __vue_module_identifier__
-)
-Component.options.__file = "resources/assets/js/components/TodoItem.vue"
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-14d94da0", Component.options)
-  } else {
-    hotAPI.reload("data-v-14d94da0", Component.options)
-  }
-  module.hot.dispose(function (data) {
-    disposed = true
-  })
-})()}
-
-module.exports = Component.exports
-
-
-/***/ }),
-/* 12 */
 /***/ (function(module, exports) {
 
 /* globals __VUE_SSR_CONTEXT__ */
@@ -14019,15 +13972,15 @@ module.exports = function normalizeComponent (
 
 
 /***/ }),
-/* 13 */
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(14);
+__webpack_require__(13);
 module.exports = __webpack_require__(46);
 
 
 /***/ }),
-/* 14 */
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
@@ -14037,9 +13990,9 @@ module.exports = __webpack_require__(46);
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-__webpack_require__(15);
+__webpack_require__(14);
 
-window.Vue = __webpack_require__(38);
+window.Vue = __webpack_require__(37);
 
 window.bus = new Vue();
 
@@ -14049,7 +14002,7 @@ window.bus = new Vue();
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-Vue.component('todo-item', __webpack_require__(11));
+Vue.component('todo-item', __webpack_require__(40));
 Vue.component('todo-list', __webpack_require__(43));
 
 var app = new Vue({
@@ -14057,11 +14010,11 @@ var app = new Vue({
 });
 
 /***/ }),
-/* 15 */
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-window._ = __webpack_require__(16);
+window._ = __webpack_require__(15);
 window.Popper = __webpack_require__(3).default;
 
 /**
@@ -14073,7 +14026,7 @@ window.Popper = __webpack_require__(3).default;
 try {
   window.$ = window.jQuery = __webpack_require__(4);
 
-  __webpack_require__(18);
+  __webpack_require__(17);
 } catch (e) {}
 
 /**
@@ -14082,7 +14035,7 @@ try {
  * CSRF token as a header based on the value of the "XSRF" token cookie.
  */
 
-window.axios = __webpack_require__(19);
+window.axios = __webpack_require__(18);
 
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
@@ -14118,7 +14071,7 @@ if (token) {
 // });
 
 /***/ }),
-/* 16 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global, module) {var __WEBPACK_AMD_DEFINE_RESULT__;/**
@@ -31228,10 +31181,10 @@ if (token) {
   }
 }.call(this));
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1), __webpack_require__(17)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1), __webpack_require__(16)(module)))
 
 /***/ }),
-/* 17 */
+/* 16 */
 /***/ (function(module, exports) {
 
 module.exports = function(module) {
@@ -31259,7 +31212,7 @@ module.exports = function(module) {
 
 
 /***/ }),
-/* 18 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*!
@@ -35192,13 +35145,13 @@ module.exports = function(module) {
 
 
 /***/ }),
-/* 19 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(20);
+module.exports = __webpack_require__(19);
 
 /***/ }),
-/* 20 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35206,7 +35159,7 @@ module.exports = __webpack_require__(20);
 
 var utils = __webpack_require__(0);
 var bind = __webpack_require__(5);
-var Axios = __webpack_require__(22);
+var Axios = __webpack_require__(21);
 var defaults = __webpack_require__(2);
 
 /**
@@ -35241,14 +35194,14 @@ axios.create = function create(instanceConfig) {
 
 // Expose Cancel & CancelToken
 axios.Cancel = __webpack_require__(10);
-axios.CancelToken = __webpack_require__(36);
+axios.CancelToken = __webpack_require__(35);
 axios.isCancel = __webpack_require__(9);
 
 // Expose all/spread
 axios.all = function all(promises) {
   return Promise.all(promises);
 };
-axios.spread = __webpack_require__(37);
+axios.spread = __webpack_require__(36);
 
 module.exports = axios;
 
@@ -35257,7 +35210,7 @@ module.exports.default = axios;
 
 
 /***/ }),
-/* 21 */
+/* 20 */
 /***/ (function(module, exports) {
 
 /*!
@@ -35284,7 +35237,7 @@ function isSlowBuffer (obj) {
 
 
 /***/ }),
-/* 22 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35292,8 +35245,8 @@ function isSlowBuffer (obj) {
 
 var defaults = __webpack_require__(2);
 var utils = __webpack_require__(0);
-var InterceptorManager = __webpack_require__(31);
-var dispatchRequest = __webpack_require__(32);
+var InterceptorManager = __webpack_require__(30);
+var dispatchRequest = __webpack_require__(31);
 
 /**
  * Create a new instance of Axios
@@ -35370,7 +35323,7 @@ module.exports = Axios;
 
 
 /***/ }),
-/* 23 */
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35389,7 +35342,7 @@ module.exports = function normalizeHeaderName(headers, normalizedName) {
 
 
 /***/ }),
-/* 24 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35422,7 +35375,7 @@ module.exports = function settle(resolve, reject, response) {
 
 
 /***/ }),
-/* 25 */
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35450,7 +35403,7 @@ module.exports = function enhanceError(error, config, code, request, response) {
 
 
 /***/ }),
-/* 26 */
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35523,7 +35476,7 @@ module.exports = function buildURL(url, params, paramsSerializer) {
 
 
 /***/ }),
-/* 27 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35583,7 +35536,7 @@ module.exports = function parseHeaders(headers) {
 
 
 /***/ }),
-/* 28 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35658,7 +35611,7 @@ module.exports = (
 
 
 /***/ }),
-/* 29 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35701,7 +35654,7 @@ module.exports = btoa;
 
 
 /***/ }),
-/* 30 */
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35761,7 +35714,7 @@ module.exports = (
 
 
 /***/ }),
-/* 31 */
+/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35820,18 +35773,18 @@ module.exports = InterceptorManager;
 
 
 /***/ }),
-/* 32 */
+/* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 var utils = __webpack_require__(0);
-var transformData = __webpack_require__(33);
+var transformData = __webpack_require__(32);
 var isCancel = __webpack_require__(9);
 var defaults = __webpack_require__(2);
-var isAbsoluteURL = __webpack_require__(34);
-var combineURLs = __webpack_require__(35);
+var isAbsoluteURL = __webpack_require__(33);
+var combineURLs = __webpack_require__(34);
 
 /**
  * Throws a `Cancel` if cancellation has been requested.
@@ -35913,7 +35866,7 @@ module.exports = function dispatchRequest(config) {
 
 
 /***/ }),
-/* 33 */
+/* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35940,7 +35893,7 @@ module.exports = function transformData(data, headers, fns) {
 
 
 /***/ }),
-/* 34 */
+/* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35961,7 +35914,7 @@ module.exports = function isAbsoluteURL(url) {
 
 
 /***/ }),
-/* 35 */
+/* 34 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35982,7 +35935,7 @@ module.exports = function combineURLs(baseURL, relativeURL) {
 
 
 /***/ }),
-/* 36 */
+/* 35 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36046,7 +35999,7 @@ module.exports = CancelToken;
 
 
 /***/ }),
-/* 37 */
+/* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36080,7 +36033,7 @@ module.exports = function spread(callback) {
 
 
 /***/ }),
-/* 38 */
+/* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -47043,10 +46996,10 @@ Vue.compile = compileToFunctions;
 
 module.exports = Vue;
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1), __webpack_require__(39).setImmediate))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1), __webpack_require__(38).setImmediate))
 
 /***/ }),
-/* 39 */
+/* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {var scope = (typeof global !== "undefined" && global) ||
@@ -47102,7 +47055,7 @@ exports._unrefActive = exports.active = function(item) {
 };
 
 // setimmediate attaches itself to the global object
-__webpack_require__(40);
+__webpack_require__(39);
 // On some exotic environments, it's not clear which object `setimmediate` was
 // able to install onto.  Search each possibility in the same order as the
 // `setimmediate` library.
@@ -47116,7 +47069,7 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 40 */
+/* 39 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global, process) {(function (global, undefined) {
@@ -47309,6 +47262,53 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1), __webpack_require__(6)))
 
 /***/ }),
+/* 40 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(11)
+/* script */
+var __vue_script__ = __webpack_require__(41)
+/* template */
+var __vue_template__ = __webpack_require__(42)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/TodoItem.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-14d94da0", Component.options)
+  } else {
+    hotAPI.reload("data-v-14d94da0", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
 /* 41 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -47338,54 +47338,57 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-    props: ['todo', 'index'],
     data: function data() {
         return {
-            state: {
-                edit: false
-            },
-            data: {
-                text: '',
-                finished: false
-            }
+            todos: [],
+            newTodo: '',
+            baseId: 1
         };
     },
-    mounted: function mounted() {
-        var t = this;
-
-        t.data.text = t.todo.text;
-        t.data.finished = t.todo.finished;
+    created: function created() {
+        this.getTodos();
     },
 
     methods: {
-        updateTodo: function updateTodo() {
+        add: function add() {
             var t = this;
 
-            t.$nextTick(function () {
-                bus.$emit('update-todo', { data: t.data, index: t.index, id: t.todo.id });
-            });
-
-            t.state.edit = false;
-        },
-        remove: function remove() {
-            var t = this;
-
-            bus.$emit('remove-todo', { index: t.index, id: t.todo.id });
-        },
-        startEdit: function startEdit() {
-            var t = this;
-
-            if (t.data.finished === false) {
-                t.state.edit = true;
+            if (t.newTodo.length > 0) {
+                t.createTodo(t.newTodo);
+                t.newTodo = '';
             }
         },
-        cancelEdit: function cancelEdit() {
+        updateStatus: function updateStatus(todo) {
+            todo.finished = !todo.finished;
+        },
+        remove: function remove(index) {
             var t = this;
 
-            t.state.edit = false;
-            t.data.text = t.todo.text;
+            t.todos.splice(index, 1);
+        },
+        getTodos: function getTodos() {
+            var t = this;
+
+            axios.get('/api/todo').then(function (_ref) {
+                var data = _ref.data;
+
+                t.todos = data;
+            });
+        },
+        createTodo: function createTodo(text) {
+            var t = this;
+
+            axios.post('api/todo', { text: text, finished: false }).then(function (_ref2) {
+                var data = _ref2.data;
+
+                t.todos.unshift(data);
+            });
         }
     }
 });
@@ -47398,160 +47401,132 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "mb-4" }, [
-    _c(
-      "div",
-      {
-        directives: [
-          {
-            name: "show",
-            rawName: "v-show",
-            value: _vm.state.edit === false,
-            expression: "state.edit === false"
-          }
-        ],
-        staticClass: "flex items-center w-full"
-      },
-      [
-        _c("input", {
-          directives: [
-            {
-              name: "model",
-              rawName: "v-model",
-              value: _vm.data.finished,
-              expression: "data.finished"
-            }
-          ],
-          staticClass: "mr-2",
-          attrs: { type: "checkbox" },
-          domProps: {
-            checked: Array.isArray(_vm.data.finished)
-              ? _vm._i(_vm.data.finished, null) > -1
-              : _vm.data.finished
-          },
-          on: {
-            click: _vm.updateTodo,
-            change: function($event) {
-              var $$a = _vm.data.finished,
-                $$el = $event.target,
-                $$c = $$el.checked ? true : false
-              if (Array.isArray($$a)) {
-                var $$v = null,
-                  $$i = _vm._i($$a, $$v)
-                if ($$el.checked) {
-                  $$i < 0 && _vm.$set(_vm.data, "finished", $$a.concat([$$v]))
-                } else {
-                  $$i > -1 &&
-                    _vm.$set(
-                      _vm.data,
-                      "finished",
-                      $$a.slice(0, $$i).concat($$a.slice($$i + 1))
-                    )
-                }
-              } else {
-                _vm.$set(_vm.data, "finished", $$c)
+  return _c(
+    "div",
+    {
+      staticClass:
+        "bg-white rounded shadow p-6  m-4 w-full lg:w-3/4 lg:max-w-lg"
+    },
+    [
+      _c("div", { staticClass: "mb-4" }, [
+        _c("h1", { staticClass: "text-grey-darkest" }, [_vm._v("Todo List")]),
+        _vm._v(" "),
+        _c("div", { staticClass: "flex mt-4" }, [
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.newTodo,
+                expression: "newTodo"
               }
-            }
-          }
-        }),
-        _vm._v(" "),
-        _c(
-          "p",
-          {
-            staticClass: "w-auto",
-            class: _vm.data.finished
-              ? "line-through text-green"
-              : "text-grey-darkest cursor-pointer hover:text-black hover:font-bold",
-            on: { click: _vm.startEdit }
-          },
-          [_vm._v(_vm._s(_vm.todo.text))]
-        ),
-        _vm._v(" "),
-        _c(
-          "button",
-          {
+            ],
             staticClass:
-              "flex-no-shrink p-2 ml-auto border-2 rounded text-red border-red hover:text-white hover:bg-red",
+              "shadow appearance-none border rounded w-full py-2 px-3 mr-4 text-grey-darker",
+            attrs: { placeholder: "Add Todo" },
+            domProps: { value: _vm.newTodo },
             on: {
-              click: function($event) {
-                _vm.remove(_vm.index)
+              keyup: function($event) {
+                if (
+                  !("button" in $event) &&
+                  _vm._k($event.keyCode, "enter", 13, $event.key, "Enter")
+                ) {
+                  return null
+                }
+                return _vm.add($event)
+              },
+              input: function($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.newTodo = $event.target.value
               }
             }
-          },
-          [_vm._v("Remove\n        ")]
-        )
-      ]
-    ),
-    _vm._v(" "),
-    _c(
-      "div",
-      {
-        directives: [
-          {
-            name: "show",
-            rawName: "v-show",
-            value: _vm.state.edit === true,
-            expression: "state.edit === true"
-          }
-        ],
-        staticClass: "flex items-center w-full"
-      },
-      [
-        _c("input", {
-          directives: [
+          }),
+          _vm._v(" "),
+          _c(
+            "button",
             {
-              name: "model",
-              rawName: "v-model",
-              value: _vm.data.text,
-              expression: "data.text"
-            }
-          ],
-          staticClass:
-            "appearance-none border rounded w-full py-2 px-3 mr-2 text-black",
-          attrs: { placeholder: "Update Todo" },
-          domProps: { value: _vm.data.text },
-          on: {
-            keyup: function($event) {
-              if (
-                !("button" in $event) &&
-                _vm._k($event.keyCode, "enter", 13, $event.key, "Enter")
-              ) {
-                return null
-              }
-              return _vm.updateTodo($event)
+              staticClass:
+                "flex-no-shrink p-2 border-2 rounded text-teal border-teal hover:text-white hover:bg-teal",
+              attrs: { disabled: _vm.newTodo.length === 0 },
+              on: { click: _vm.add }
             },
-            input: function($event) {
-              if ($event.target.composing) {
-                return
-              }
-              _vm.$set(_vm.data, "text", $event.target.value)
-            }
-          }
-        }),
-        _vm._v(" "),
-        _c(
-          "button",
-          {
-            staticClass:
-              "flex-no-shrink p-2 ml-2 border-2 rounded text-teal border-teal hover:text-white hover:bg-teal",
-            attrs: { disabled: _vm.data.text.length === 0 },
-            on: { click: _vm.updateTodo }
-          },
-          [_vm._v("Update\n        ")]
-        ),
-        _vm._v(" "),
-        _c(
-          "button",
-          {
-            staticClass:
-              "flex-no-shrink p-2 ml-2 border-2 rounded text-red border-red hover:text-white hover:bg-red",
-            on: { click: _vm.cancelEdit }
-          },
-          [_vm._v("Cancel\n        ")]
-        )
-      ]
-    )
-  ])
+            [_vm._v("Add\n            ")]
+          )
+        ])
+      ]),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "max-h-screen-1/2 overflow-y-scroll" },
+        [
+          _c(
+            "div",
+            {
+              directives: [
+                {
+                  name: "show",
+                  rawName: "v-show",
+                  value: _vm.todos.length === 0,
+                  expression: "todos.length === 0"
+                }
+              ]
+            },
+            [
+              _c("p", { staticClass: "w-full text-center text-grey-dark" }, [
+                _vm._v("There are no todos")
+              ])
+            ]
+          ),
+          _vm._v(" "),
+          _vm._l(_vm.todos, function(todo, index) {
+            return _c(
+              "div",
+              { key: todo.id, staticClass: "flex mb-4 items-center" },
+              [
+                _c("input", {
+                  staticClass: "mr-2",
+                  attrs: { type: "checkbox" },
+                  on: {
+                    click: function($event) {
+                      _vm.updateStatus(todo)
+                    }
+                  }
+                }),
+                _vm._v(" "),
+                _c(
+                  "p",
+                  {
+                    staticClass: "w-full",
+                    class: todo.finished
+                      ? "line-through text-green"
+                      : "text-grey-darkest"
+                  },
+                  [_vm._v("\n                " + _vm._s(todo.text))]
+                ),
+                _vm._v(" "),
+                _c(
+                  "button",
+                  {
+                    staticClass:
+                      "flex-no-shrink p-2 ml-2 border-2 rounded text-red border-red hover:text-white hover:bg-red",
+                    on: {
+                      click: function($event) {
+                        _vm.remove(index)
+                      }
+                    }
+                  },
+                  [_vm._v("Remove\n            ")]
+                )
+              ]
+            )
+          })
+        ],
+        2
+      )
+    ]
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -47568,7 +47543,7 @@ if (false) {
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
-var normalizeComponent = __webpack_require__(12)
+var normalizeComponent = __webpack_require__(11)
 /* script */
 var __vue_script__ = __webpack_require__(44)
 /* template */
@@ -47616,8 +47591,6 @@ module.exports = Component.exports
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__TodoItem__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__TodoItem___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__TodoItem__);
 //
 //
 //
@@ -47636,31 +47609,45 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
         return {
             todos: [],
-            newTodo: ''
+            newTodo: '',
+            baseId: 1
         };
     },
     created: function created() {
         this.getTodos();
-        this.initListeners();
     },
 
     methods: {
-        initListeners: function initListeners() {
+        add: function add() {
             var t = this;
 
-            bus.$on('update-todo', function (details) {
-                t.updateTodo(details);
-            });
+            if (t.newTodo.length > 0) {
+                t.createTodo(t.newTodo);
+                t.newTodo = '';
+            }
+        },
+        updateStatus: function updateStatus(todo) {
+            todo.finished = !todo.finished;
+        },
+        remove: function remove(index) {
+            var t = this;
 
-            bus.$on('remove-todo', function (details) {
-                t.removeTodo(details);
-            });
+            t.todos.splice(index, 1);
         },
         getTodos: function getTodos() {
             var t = this;
@@ -47674,39 +47661,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         createTodo: function createTodo(text) {
             var t = this;
 
-            axios.post('/api/todo', { text: text, finished: false }).then(function (_ref2) {
+            axios.post('api/todo', { text: text, finished: false }).then(function (_ref2) {
                 var data = _ref2.data;
 
                 t.todos.unshift(data);
             });
-        },
-        updateTodo: function updateTodo(details) {
-            var t = this;
-
-            axios.patch('/api/todo/' + details.id, details.data).then(function (_ref3) {
-                var data = _ref3.data;
-
-                t.todos.splice(details.index, 1, data);
-            });
-        },
-        removeTodo: function removeTodo(details) {
-            var t = this;
-
-            axios.delete('/api/todo/' + details.id).then(function () {
-                t.todos.splice(details.index, 1);
-            });
-        },
-        addTodo: function addTodo() {
-            var t = this;
-
-            if (t.newTodo.length > 0) {
-                t.createTodo(t.newTodo);
-                t.newTodo = '';
-            }
         }
-    },
-    components: {
-        todoItem: __WEBPACK_IMPORTED_MODULE_0__TodoItem___default.a
     }
 });
 
@@ -47721,10 +47681,11 @@ var render = function() {
   return _c(
     "div",
     {
-      staticClass: "bg-white rounded shadow p-6 m-4 w-full lg:w-3/4 lg:max-w-lg"
+      staticClass:
+        "bg-white rounded shadow p-6  m-4 w-full lg:w-3/4 lg:max-w-lg"
     },
     [
-      _c("div", { staticClass: "mb-6" }, [
+      _c("div", { staticClass: "mb-4" }, [
         _c("h1", { staticClass: "text-grey-darkest" }, [_vm._v("Todo List")]),
         _vm._v(" "),
         _c("div", { staticClass: "flex mt-4" }, [
@@ -47749,7 +47710,7 @@ var render = function() {
                 ) {
                   return null
                 }
-                return _vm.addTodo($event)
+                return _vm.add($event)
               },
               input: function($event) {
                 if ($event.target.composing) {
@@ -47766,9 +47727,9 @@ var render = function() {
               staticClass:
                 "flex-no-shrink p-2 border-2 rounded text-teal border-teal hover:text-white hover:bg-teal",
               attrs: { disabled: _vm.newTodo.length === 0 },
-              on: { click: _vm.addTodo }
+              on: { click: _vm.add }
             },
-            [_vm._v("Add")]
+            [_vm._v("Add\n            ")]
           )
         ])
       ]),
@@ -47777,13 +47738,6 @@ var render = function() {
         "div",
         { staticClass: "max-h-screen-1/2 overflow-y-scroll" },
         [
-          _vm._l(_vm.todos, function(todo, index) {
-            return _c("todo-item", {
-              key: todo.id,
-              attrs: { todo: todo, index: index }
-            })
-          }),
-          _vm._v(" "),
           _c(
             "div",
             {
@@ -47801,7 +47755,50 @@ var render = function() {
                 _vm._v("There are no todos")
               ])
             ]
-          )
+          ),
+          _vm._v(" "),
+          _vm._l(_vm.todos, function(todo, index) {
+            return _c(
+              "div",
+              { key: todo.id, staticClass: "flex mb-4 items-center" },
+              [
+                _c("input", {
+                  staticClass: "mr-2",
+                  attrs: { type: "checkbox" },
+                  on: {
+                    click: function($event) {
+                      _vm.updateStatus(todo)
+                    }
+                  }
+                }),
+                _vm._v(" "),
+                _c(
+                  "p",
+                  {
+                    staticClass: "w-full",
+                    class: todo.finished
+                      ? "line-through text-green"
+                      : "text-grey-darkest"
+                  },
+                  [_vm._v("\n                " + _vm._s(todo.text))]
+                ),
+                _vm._v(" "),
+                _c(
+                  "button",
+                  {
+                    staticClass:
+                      "flex-no-shrink p-2 ml-2 border-2 rounded text-red border-red hover:text-white hover:bg-red",
+                    on: {
+                      click: function($event) {
+                        _vm.remove(index)
+                      }
+                    }
+                  },
+                  [_vm._v("Remove\n            ")]
+                )
+              ]
+            )
+          })
         ],
         2
       )

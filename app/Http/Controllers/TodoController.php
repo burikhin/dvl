@@ -42,7 +42,7 @@ class TodoController extends Controller
 
         $todo = Todo::create($data);
 
-        return response($todo, 200);
+        return response($todo, 201);
     }
 
     /**

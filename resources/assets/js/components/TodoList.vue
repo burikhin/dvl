@@ -3,8 +3,11 @@
         <div class="mb-6">
             <h1 class="text-grey-darkest">Todo List</h1>
             <div class="flex mt-4">
-                <input class="shadow appearance-none border rounded w-full py-2 px-3 mr-4 text-grey-darker" v-model="newTodo" @keyup.enter="addTodo" placeholder="Add Todo">
-                <button class="flex-no-shrink p-2 border-2 rounded text-teal border-teal hover:text-white hover:bg-teal" @click="addTodo" :disabled="newTodo.length === 0">Add</button>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 mr-4 text-grey-darker"
+                       v-model="newTodo" @keyup.enter="addTodo" placeholder="Add Todo">
+                <button class="flex-no-shrink p-2 border-2 rounded text-teal border-teal hover:text-white hover:bg-teal"
+                        @click="addTodo" :disabled="newTodo.length === 0">Add
+                </button>
             </div>
         </div>
         <div class="max-h-screen-1/2 overflow-y-scroll">
@@ -18,9 +21,10 @@
 
 <script>
     import todoItem from './TodoItem'
-    export default{
-        data(){
-            return{
+
+    export default {
+        data() {
+            return {
                 todos: [],
                 newTodo: '',
             }
@@ -60,7 +64,7 @@
             updateTodo(details) {
                 const t = this;
 
-                axios.patch('/api/todo/'+ details.id, details.data)
+                axios.patch('/api/todo/' + details.id, details.data)
                     .then(({data}) => {
                         t.todos.splice(details.index, 1, data)
                     })
@@ -68,7 +72,7 @@
             removeTodo(details) {
                 const t = this;
 
-                axios.delete('/api/todo/'+ details.id)
+                axios.delete('/api/todo/' + details.id)
                     .then(() => {
                         t.todos.splice(details.index, 1)
                     })
@@ -76,7 +80,7 @@
             addTodo() {
                 const t = this;
 
-                if(t.newTodo.length > 0) {
+                if (t.newTodo.length > 0) {
                     t.createTodo(t.newTodo);
                     t.newTodo = '';
                 }

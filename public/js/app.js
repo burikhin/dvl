@@ -47636,6 +47636,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -47768,7 +47772,7 @@ var render = function() {
               attrs: { disabled: _vm.newTodo.length === 0 },
               on: { click: _vm.addTodo }
             },
-            [_vm._v("Add")]
+            [_vm._v("Add\n            ")]
           )
         ])
       ]),
